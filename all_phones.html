@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div id="header1"></div>
+
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+    Lọc, sắp xếp
+    </button>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Lọc, sắp xếp</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+            Lưu ý: Chọn hãng trước rồi mới chọn các bộ lọc khác (chỉ chọn một lần mỗi bộ) (trừ Sắp xếp theo giá)
+            </div>
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Sắp xếp theo giá
+                </button>
+                <ul class="dropdown-menu sort1">
+                    <li><button class="dropdown-item" id="sort1-toggle-asc">Thấp đến cao</button></li>
+                    <li><button class="dropdown-item" id="sort1-toggle-des">Cao đến thấp</button></li>
+                </ul>
+            </div>
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Lọc theo hãng</button>
+                <ul class="dropdown-menu">
+                    <li><button class="dropdown-item filter1-toggle" data-type-phone="all">Tất cả</button></li>
+                    <li><button class="dropdown-item filter1-toggle" data-type-phone="apple">Apple</button></li>
+                    <li><button class="dropdown-item filter1-toggle" data-type-phone="samsung">Samsung</button></li>
+                    <li><button class="dropdown-item filter1-toggle" data-type-phone="nokia">Nokia</button></li>
+                    <li><button class="dropdown-item filter1-toggle" data-type-phone="sony">Sony</button></li>
+                    <li><button class="dropdown-item filter1-toggle" data-type-phone="tecno">Tecno</button></li>
+                </ul>
+            </div>
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Lọc theo màu</button>
+                <ul class="dropdown-menu">
+                    <li><button class="dropdown-item filter2-toggle" data-type-color="all">Tất cả</button></li>
+                    <li><button class="dropdown-item filter2-toggle" data-type-color="black">Đen</button></li>
+                    <li><button class="dropdown-item filter2-toggle" data-type-color="blue">Xanh dương</button></li>
+                    <li><button class="dropdown-item filter2-toggle" data-type-color="purple">Tím</button></li>
+                    <li><button class="dropdown-item filter2-toggle" data-type-color="gray">Bạc</button></li>
+                </ul>
+            </div>
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Lọc theo giá</button>
+                <ul class="dropdown-menu">
+                    <li><button class="dropdown-item filter3-toggle" data-type-price-min="-1" data-type-price-max="-1">Tất cả</button></li>
+                    <li><button class="dropdown-item filter3-toggle" data-type-price-min="1" data-type-price-max="20000000">Dưới 20 triệu</button></li>
+                    <li><button class="dropdown-item filter3-toggle" data-type-price-min="20000001" data-type-price-max="30000000">20 triệu đến 30 triệu</button></li>
+                    <li><button class="dropdown-item filter3-toggle" data-type-price-min="30000001" data-type-price-max="-1">30 triệu trở lên</button></li>
+                </ul>
+            </div>
+
+        </div>
+        
+    </div>
+    
+    
+
+    <div class="container-fluid my-3 px-lg-5">
+        <div class="row row-cols-2 row-cols-md-2 row-cols-lg-4 row-gap-3 filter1-container" id="sort-container"> <!--filter container-->
+            <div class="col filter1-item zoom" data-price="24590000" data-type-phone="apple" data-type-color="purple"> <!--filter item-->
+                <div class="card">
+                    <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone_17_256gb-3_2.jpg" class="card-img-top img-fluid" alt="iphone-17">
+                    <div class="card-body">
+                        <p class="card-title h5">iPhone 17 256GB</p>
+                        <p class="card-text">24.590.000đ</p>
+                        <a href="iphone_17.html" class="btn btn-primary">Chi tiết sản phẩm</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col filter1-item zoom" data-price="23990000" data-type-phone="samsung" data-type-color="blue">
+                <div class="card">
+                    <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung-galaxy-z-flip-7-1.jpg" class="card-img-top img-fluid" alt="samsung-galaxy-z-flip-7">
+                    <div class="card-body">
+                        <p class="card-title h5">Samsung Galaxy Z Flip 7 12GB 256GB</p>
+                        <p class="card-text">23.990.000đ</p>
+                        <a href="#" class="btn btn-primary">Chi tiết sản phẩm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col filter1-item zoom" data-price="1430000" data-type-phone="nokia" data-type-color="black">
+                <div class="card">
+                    <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/n/o/nokia-3210-4g.png" class="card-img-top img-fluid" alt="nokia-3210-4g">
+                    <div class="card-body">
+                        <p class="card-title h5">Nokia 3210 4G</p>
+                        <p class="card-text">1.430.000đ</p>
+                        <a href="#" class="btn btn-primary">Chi tiết sản phẩm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col filter1-item zoom" data-price="27090000" data-type-phone="sony" data-type-color="black">
+                <div class="card">
+                    <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/d/i/dien-thoai-sony-xperia-1-vii.png" class="card-img-top img-fluid" alt="sony-xperia-1-vii">
+                    <div class="card-body">
+                        <p class="card-title h5">Sony Xperia 1 VII 12GB 256GB</p>
+                        <p class="card-text">27.090.000đ</p>
+                        <a href="#" class="btn btn-primary">Chi tiết sản phẩm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col filter1-item zoom" data-price="12190000" data-type-phone="sony" data-type-color="blue"> 
+                <div class="card">
+                    <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/d/i/dien-thoai-sony-xperia-10-vii-7.jpg" class="card-img-top img-fluid" alt="sony-xperia-1-vii">
+                    <div class="card-body">
+                        <p class="card-title h5">Sony Xperia 10 VII 8GB 128GB</p>
+                        <p class="card-text">12.190.000đ</p>
+                        <a href="#" class="btn btn-primary">Chi tiết sản phẩm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col filter1-item zoom" data-price="19590000" data-type-phone="apple" data-type-color="blue"> 
+                <div class="card">
+                    <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone-16-1.png" class="card-img-top img-fluid" alt="iphone-16">
+                    <div class="card-body">
+                        <p class="card-title h5">iPhone 16 128GB</p>
+                        <p class="card-text">19.590.000đ</p>
+                        <a href="#" class="btn btn-primary">Chi tiết sản phẩm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col filter1-item zoom" data-price="25990000" data-type-phone="samsung" data-type-color="black"> 
+                <div class="card">
+                    <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/d/i/dien-thoai-samsung-galaxy-s25-ultra_3__3.png" class="card-img-top img-fluid" alt="iphone-16">
+                    <div class="card-body">
+                        <p class="card-title h5">Samsung Galaxy S25 Ultra 12GB 256GB</p>
+                        <p class="card-text">25.990.000đ</p>
+                        <a href="#" class="btn btn-primary">Chi tiết sản phẩm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col filter1-item zoom" data-price="19590000" data-type-phone="tecno" data-type-color="gray"> 
+                <div class="card">
+                    <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/tecno-spark-40__1.jpg" class="card-img-top img-fluid" alt="iphone-16">
+                    <div class="card-body">
+                        <p class="card-title h5">TECNO Spark 40 Pro+ 8GB 256GB</p>
+                        <p class="card-text">4.690.000đ</p>
+                        <a href="#" class="btn btn-primary">Chi tiết sản phẩm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <nav aria-label="thanh phan trang">
+        <ul class="pagination justify-content-center">
+            <li class="page-item active"><a class="page-link page-number" aria-current="page">1</a></li>
+            <li class="page-item"><a class="page-link page-number">2</a></li>
+        </ul>
+    </nav>
+
+
+    <div id="footer1"></div>
+
+    <style>
+        .zoom {
+            transition: transform .2s; /* Animation */
+        }
+
+        .zoom:hover {
+            transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+    </style>
+    <script src="/assets/script/header.js"></script>
+    <script src="/assets/script/footer.js"></script>
+    <script src="/assets/script/sort_filter_pagination.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

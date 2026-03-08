@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký</title>
+    <title>Blog</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
@@ -38,23 +38,43 @@
     </nav>
     <div style="margin: 10vh 0 0 0;"></div>
 
-    <div class="container-fluid" style="padding: 0 10vw 0 10vw;">
-        <form>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail1">
+    <div class="container-fluid">
+        <div class="d-block justify-content-center">
+            <div class="row row-gap-3">
+                <form>
+                    <input type="text" class="form-control" id="blog-search" placeholder="Tìm kiếm blog">
+                    <button type="submit" class="btn btn-danger">Tìm</button>
+                </form>
             </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Mật khẩu</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" aria-describedby="passwordHelpBlock">
-                <div id="passwordHelpBlock" class="form-text">
-                    Mật khẩu phải ít nhất 8 ký tự
+        </div>
+        <div class="row">
+        
+        
+            <div class="col">
+                <div class="container-fluid">
+                    <div class="row row-cols-2 row-cols-md-2 row-cols-lg-4 row-gap-2"> 
+                        <div class="col zoom"> 
+                            <div class="card">
+                                <img src="https://cdn-media.sforum.vn/storage/app/media/nhatquang519/tren-tay-corsair-galleon-100-sd/tren-tay-corsair-galleon-100-sd-cover.jpg" class="card-img-top img-fluid" alt="corsair-galleon-100-sd-cover">
+                                <div class="card-body">
+                                    <p class="card-title h5 text-truncate">Trên tay Corsair Galleon 100 SD: Bàn phím TKL tích hợp Stream Deck và màn hình 5 inch “siêu độc", giá 9.5 triệu</p>
+                                    <a href="news-corsair-galleon-100-sd.html" class="btn btn-danger">Xem thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                                    
+                            
+                <nav aria-label="thanh phan trang" class="d-flex justify-content-center mt-3">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Trước</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Tiếp</a></li>
+                    </ul>
+                </nav>
             </div>
-
-            <button type="submit" class="btn btn-danger">Đăng ký</button>
-        </form>
-        <p class="text-center mt-3">Đã có tài khoản? <a href="login.html">Đăng nhập ngay</a></p>
+        </div>
     </div>
         
             

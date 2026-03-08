@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tất cả sản phẩm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-danger fixed-top shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                phoneS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">Blog</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sản phẩm</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="all.html">Tất cả sản phẩm</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Đăng nhập</a></li>
+                </ul>
+                
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Tìm kiến sản phẩm" aria-label="search"/>
+                    <button class="btn btn-success text-nowrap" type="submit">Tìm kiếm</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div style="margin: 10vh 0 0 0;"></div>
+
+    <div class="container-fluid" style="padding: 0 5vw 3vh 5vw;">
+        <div class="row">
+            <div class="col-3 rounded bg-secondary" style="padding: 2vh 2vw 2vh 2vw;">
+                <form>
+                    <p class="h3">Bộ lọc</p>
+
+                    <div class="mb-3">
+                        <p class="h5">Bộ nhớ trong</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="storage-filter-256gb">
+                            <label class="form-check-label" for="storage-filter-256gb">
+                                256 GB
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="storage-filter-512gb">
+                            <label class="form-check-label" for="storage-filter-512gb">
+                                512 GB
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="storage-filter-1tb">
+                            <label class="form-check-label" for="storage-filter-1tb">
+                                1 TB
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="storage-filter-2tb">
+                            <label class="form-check-label" for="storage-filter-2tb">
+                                2 TB
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <p class="h5">Màu</p>
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="color-filter-black">
+                            <label class="form-check-label" for="color-filter-black">
+                                Đen
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="color-filter-silver">
+                            <label class="form-check-label" for="color-filter-silver">
+                                Bạc
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="color-filter-blue">
+                            <label class="form-check-label" for="color-filter-blue">
+                                Xanh
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="color-filter-purple">
+                            <label class="form-check-label" for="color-filter-purple">
+                                Tím
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="range4" class="form-label h5">Khoảng giá</label>
+                        <input type="range" class="form-range" min="0" max="50000000" value="50000000" id="range4" style="accent-color: rgb(198, 21, 21);">
+                        <p>Từ 0 đến <output for="range4" id="rangeValue" aria-hidden="true"></output> đồng</p>
+                    </div>
+
+                    <div class="mb-3">
+                        <p class="h5">Sắp xếp theo</p>
+                        <select class="form-select" aria-label="Default select example" >
+                            <option value="1" selected>Độ phổ biến</option>
+                            <option value="2">Giá từ thấp đến cao</option>
+                            <option value="3">Giá từ cao đến thấp</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-danger">Áp dụng</button>
+                </form>
+            </div>
+        
+        
+        
+            <div class="col-9">
+                <div class="container-fluid">
+                    <div class="row row-cols-2 row-cols-md-2 row-cols-lg-4 row-gap-2"> 
+                        <div class="col zoom"> 
+                            <div class="card">
+                                <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone_17_256gb-3_2.jpg" class="card-img-top img-fluid" alt="iphone-17">
+                                <div class="card-body">
+                                    <p class="card-title h5">iPhone 17 256GB</p>
+                                    <p class="card-text">24.590.000đ</p>
+                                    <a href="iphone_17.html" class="btn btn-danger">Chi tiết sản phẩm</a>
+                                </div>
+                            </div>
+                        </div>
+
+                                
+                        <div class="col zoom">
+                            <div class="card">
+                                <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung-galaxy-z-flip-7-1.jpg" class="card-img-top img-fluid" alt="samsung-galaxy-z-flip-7">
+                                <div class="card-body">
+                                    <p class="card-title h5">Samsung Galaxy Z Flip 7 12GB 256GB</p>
+                                    <p class="card-text">23.990.000đ</p>
+                                    <a href="#" class="btn btn-danger">Chi tiết sản phẩm</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col zoom">
+                            <div class="card">
+                                <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/n/o/nokia-3210-4g.png" class="card-img-top img-fluid" alt="nokia-3210-4g">
+                                <div class="card-body">
+                                    <p class="card-title h5">Nokia 3210 4G</p>
+                                    <p class="card-text">1.430.000đ</p>
+                                    <a href="#" class="btn btn-danger">Chi tiết sản phẩm</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col zoom">
+                            <div class="card">
+                                <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/d/i/dien-thoai-sony-xperia-1-vii.png" class="card-img-top img-fluid" alt="sony-xperia-1-vii">
+                                <div class="card-body">
+                                    <p class="card-title h5">Sony Xperia 1 VII 12GB 256GB</p>
+                                    <p class="card-text">27.090.000đ</p>
+                                    <a href="#" class="btn btn-danger">Chi tiết sản phẩm</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col zoom"> 
+                            <div class="card">
+                                <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/d/i/dien-thoai-sony-xperia-10-vii-7.jpg" class="card-img-top img-fluid" alt="sony-xperia-1-vii">
+                                <div class="card-body">
+                                    <p class="card-title h5">Sony Xperia 10 VII 8GB 128GB</p>
+                                    <p class="card-text">12.190.000đ</p>
+                                    <a href="#" class="btn btn-danger">Chi tiết sản phẩm</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col zoom"> 
+                            <div class="card">
+                                <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone-16-1.png" class="card-img-top img-fluid" alt="iphone-16">
+                                <div class="card-body">
+                                    <p class="card-title h5">iPhone 16 128GB</p>
+                                    <p class="card-text">19.590.000đ</p>
+                                    <a href="#" class="btn btn-danger">Chi tiết sản phẩm</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col zoom"> 
+                            <div class="card">
+                                <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/d/i/dien-thoai-samsung-galaxy-s25-ultra_3__3.png" class="card-img-top img-fluid" alt="iphone-16">
+                                <div class="card-body">
+                                    <p class="card-title h5">Samsung Galaxy S25 Ultra 12GB 256GB</p>
+                                    <p class="card-text">25.990.000đ</p>
+                                    <a href="#" class="btn btn-danger">Chi tiết sản phẩm</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col zoom"> 
+                            <div class="card">
+                                <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/e/tecno-spark-40__1.jpg" class="card-img-top img-fluid" alt="iphone-16">
+                                <div class="card-body">
+                                    <p class="card-title h5">TECNO Spark 40 Pro+ 8GB 256GB</p>
+                                    <p class="card-text">4.690.000đ</p>
+                                    <a href="#" class="btn btn-danger">Chi tiết sản phẩm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav aria-label="thanh phan trang" class="d-flex justify-content-center mt-3">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Trước</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Tiếp</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        
+            
+        
+    </div>
+
+
+
+
+
+
+    <footer class="bg-secondary" style="padding: 2vh 5vw 10vh 5vw;">
+        <div class="row row-cols-1 row-cols-lg-2 row-gap-3">
+            <div class="col">
+                <form>
+                        
+                    <label for="InputEmail1" class="form-label h6">Đăng ký nhận tin mới nhất và các khuyến mãi</label>
+                    
+                    <input type="email" class="form-control" id="InputEmail1" aria-describedby="input" placeholder="Email" required> 
+                    
+                    <button type="submit" class="btn btn-danger mt-2">Đăng ký</button>
+                </form>
+                
+            </div>
+            <div class="col">
+                <p class="h6">Liên kết nhanh</p>
+                <ul class="list-unstyled">
+                    <li><a href="iphone_17.html" class="text-decoration-none text-dark">iPhone 17</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark">Samsung Galaxy Tab S10 Ultra 5G</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark">Lenovo ThinkPad E16 Gen 3</a></li>
+                    <li><a href="#" class="text-decoration-none text-dark">Sandisk Ultra A1 256GB</a></li>
+                </ul>
+                <p class="h6">Mạng xã hội</p>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-youtube"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="mt-4 text-center">2026 Trần Kiến Quang. All rights reserved</p>
+    </footer>
+
+    <style>
+        .zoom {
+            transition: transform .2s; /* Animation */
+        }
+
+        .zoom:hover {
+            transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+    </style>
+    
+
+    <script>
+        // This is an example script, please modify as needed
+        const rangeInput = document.getElementById('range4');
+        const rangeOutput = document.getElementById('rangeValue');
+
+        // Set initial value
+        rangeOutput.textContent = rangeInput.value;
+
+        rangeInput.addEventListener('input', function() {
+            rangeOutput.textContent = this.value;
+        });
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
